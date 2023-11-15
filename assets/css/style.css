@@ -11,11 +11,20 @@ header {
 body {
   margin: 0;
 }
-
+.logo-appetit-service{
+  display: flex;
+  margin-left: -10px;
+}
+.h1-as{
+  margin-left: 20px;
+  width: 1100px;
+}
 .navbar {
   padding: 15px;
   display: flex;
   margin-left: 0px;
+  display: flex;
+  align-items: end;
 }
 
 .menu-toggle {
@@ -37,9 +46,11 @@ body {
 .menu {
   list-style: none;
   display: flex;
+  flex-direction: row;
 }
 
 .menu li {
+  display: inline-block;
   margin-right: 20px;
 }
 
@@ -52,7 +63,7 @@ body {
 
 .menu {
   display: none;
-  flex-direction: column;
+  /* flex-direction: column; */
   width: 100%;
   top: 60px;
   left: 0;
@@ -77,10 +88,10 @@ body {
 .header-logo {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: space-between; */
   background-color: #e3040e;
   /* border-radius: 40%; */
-  height: 150px;
+  height: 100px;
 }
 h1 {
   color: white;
@@ -96,17 +107,17 @@ h1 {
 main{
     display: flex;
     justify-content: center;
-    height: 400px;
+    height: 360px;
     /* border: 1px solid red; */
 }
+
+
 h2{
-  margin-left: 480px;
-  margin-right: 480px;
+  
     text-align: center;
     font-size: 1.5rem;
     padding: 10px;
-    color: white;
-    background-color: #e3040e;
+    color: #e3040e;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 .slideshow-container{
@@ -161,7 +172,6 @@ h3{
   color: #e3040e;
 }
 .E-mail{
-  flex-wrap: nowrap;
   margin-top: 20px;
 }
 .mail{
@@ -172,8 +182,205 @@ h3{
   margin-top: 20px;
   
 }
+.reseaux-sociaux{
+  display: flex;
+  width: 490px;
+  margin-top: 10px;
+}
+.reseaux-sociaux a{
+  align-items: center;
+  align-content: center;
+}
+.reseaux-logo{
+  align-content: center;
+  margin-left: 20px;
+  height: 35px;
+  width: 34px;
+}
 .numero{
   color: #e3040e;
   text-decoration: none;
   font-weight: 900;
+}
+.paragraphe-repas{
+  display: flex;
+  justify-content: center;
+}
+.paragraphe-repas p{
+  color: black;
+  font-size: 1rem;
+  width: 75%;
+}
+
+@media (max-width: 430px) {
+  .header-logo{
+    height: 80px;
+    justify-content: space-around;
+  }
+  .header-logo img{
+    height: 80px;
+  }
+  h1{
+    margin-left: 5px;
+    font-size: 25px;
+  }
+  .paragraphe-repas{
+    display: flex;
+    justify-content: center;
+  }
+  .paragraphe-repas p{
+    color: black;
+    font-size: 0.6rem;
+    width: 75%;
+  }
+  
+  .menu {
+    display: none;
+    flex-direction: column; /* Display vertically on small screens */
+  }
+    .menu li{
+      height: 30px;
+      width: 100px;
+      text-align: center;
+      align-items: center;
+      align-content: center;
+    }
+    .slideshow-container{
+      /* display: flex; */
+      justify-content: center;
+      flex-direction: column;
+      align-content: center;
+      width: 50%;
+      height: 5rem;
+  
+  }
+  .mySlides-fade{
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .5s cubic-bezier(.25, .4, .4, .25);
+}
+
+.mySlides-fade:hover{
+    flex:2;
+}
+  
+  }
+  .slideshow-container2 {
+    display: none;
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .mySlides-fade1 {
+    display: none;
+  }
+  
+  .mySlides-fade1 img {
+    width: 322px;
+    height: 329px;
+  }
+  
+  .prev,
+  .next {
+    display: none;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    font-size: 24px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  @media (max-width: 430px) {
+    .header-logo{
+      height: 60px;
+    }
+    .slideshow-container2 {
+      display: block;
+      height: 330px;
+    }
+    .img-prob{
+      height: 322px;
+      width: 100%;
+    }
+    .prev,
+    .next {
+      display: inline;
+    }
+    .slideshow-container{
+      display: none;
+    }
+    .h2-background{
+      display: flex;
+      justify-content: center;
+      
+      
+    }
+    h2{
+      flex-wrap: nowrap;
+      font-size: 25px;
+      margin: 0%;
+    }
+    p{
+      font-size: 25px;
+    }
+    .contact{
+      display: flex;
+      width: 250px;
+      font-size: 20px;
+    }
+    
+    .contact span{
+      font-size: 20px;
+    }
+    .contact a{
+      font-size: 20px;
+    }
+    h3{
+      font-size: 30px;
+    }
+    .E-mail{
+      display: flex;
+      flex-direction: column;
+    }
+    .num-telephone{
+      display: flex;
+      flex-direction: column;
+    }
+    .reseaux-sociaux{
+      margin-top: 0px;
+      padding-top: 5px;
+      margin-left: 300px;
+    }
+  }
+footer{
+  display: flex;
+  justify-content: space-between;
+}
+.copyright{
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.copyright-a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: flex-end;
 }
